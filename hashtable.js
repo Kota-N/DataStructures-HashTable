@@ -22,7 +22,7 @@ class HashTable {
     setData.push(value);
 
     this.data.data[this._hash(key)] = setData;
-    return setData;
+    return setData.data;
   }
 
   get(key) {
@@ -41,4 +41,5 @@ class HashTable {
 const test = new HashTable(10);
 test.set('banana', 'wow');
 test.set('apples', 1000);
-console.log(test.get('same'));
+console.log(test.set('pudding', "that's not a fruit"));
+console.log(test.get('apples')); // expected output -> 1000
